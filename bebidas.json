@@ -1,0 +1,52 @@
+[
+    {
+        "id":1,
+        "nombre":"Absolut Raspberry",
+        "precio":3200,
+        "imagen": "./img/bebida01.png"
+    },
+    {
+        "id":2,
+        "nombre":"Absolut Pears",
+        "precio":2850,
+        "imagen": "./img/bebida02.png"
+    },
+    {
+        "id":3,
+        "nombre":"Absolut Ruby Red",
+        "precio":3000,
+        "imagen": "./img/bebida03.png"
+    },
+    {
+        "id":4,
+        "nombre":"Absolut Apeach",
+        "precio":2800,
+        "imagen": "./img/bebida04.png"
+    },
+    {
+        "id":5,
+        "nombre":"Absolut Mango",
+        "precio":3100,
+        "imagen": "./img/bebida05.png"
+    },
+    {
+        "id":6,
+        "nombre":"Promo Absolut Raspberry 4 unidades",
+        "precio":10000,
+        "imagen": "./img/bebida06.png"
+    },
+    {
+        "id":7,
+        "nombre":"Promo Absolut Pears 4 unidades",
+        "precio":9000,
+        "imagen": "./img/bebida07.png"
+    },
+    {
+        "id":8,
+        "nombre":"Promo Absolut Ruby Red 4 unidades",
+        "precio":9500,
+        "imagen": "./img/bebida08.png"
+    }
+
+
+]
