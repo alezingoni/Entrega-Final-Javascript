@@ -24,21 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Vaciar carrito de compras y actualizar el localStorage
 vaciar.addEventListener('click', () => {
-  carrito.length = 0;
-  actualizarCarrito();
-  localStorage.clear();
+  carrito.length = 0
+  actualizarCarrito()
+  localStorage.clear()
 //usando libreria sweetalert2
 Swal.fire({
   title: 'Carrito vacio',
   background: '#000',
   color: '#fff',
-});
+  });
 });
 
 //Fetch
 fetch("./bebidas.json")
-  .then(resp => resp.json())    
-  .then((data) =>{ 
+  .then(resp => resp.json())
+  .then(data =>{ 
     menus = [...data];
       //recorro datos del json mediante un forEash para mostrar productos en el dom
       menus.forEach(prod => {
@@ -80,8 +80,8 @@ const agregarAlCarrito = (prodId) => {
     const prod = carrito.map (prod => {
       if (prod.id === prodId){
         prod.cantidad++
-      };
-    });
+      }
+    })
   }else{
     const item = menus.find((prod) =>  prod.id === prodId)
     item.cantidad = 1;
@@ -93,11 +93,11 @@ const agregarAlCarrito = (prodId) => {
 //Eliminar items del carrito
 
 const eliminarDelCarrito = (prodId) => {
-  const item = carrito.find((prod) => prod.id === prodId);
-  const indice = carrito.indexOf(item);
-  carrito.splice(indice, 1);
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-  actualizarCarrito();
+  const item = carrito.find((prod) => prod.id === prodId)
+  const indice = carrito.indexOf(item)
+  carrito.splice(indice, 1)
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+  actualizarCarrito()
   //Agrego libreria Toastify para mensaje de eliminar items
   Toastify({
     text: "Producto eliminado",
@@ -113,7 +113,7 @@ const eliminarDelCarrito = (prodId) => {
 
 //Mostrar y agregar items dentro del carrito y actualización del localStorage
 const actualizarCarrito = () => {
-  contenedorCarrito.innerHTML +=""; 
+  contenedorCarrito.innerHTML =""; 
 
   carrito.forEach((prod) => {
     const etiqueta = document.createElement('tr')
